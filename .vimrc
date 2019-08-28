@@ -35,8 +35,11 @@ set backspace=indent,eol,start
 set autoindent
 set smarttab
 set expandtab
-colorscheme mustang
 highlight Normal ctermbg=None
 highlight nonText ctermbg=None
 highlight ExtraWhitespace ctermbg=red
 match ExtraWhitespace /\s\+$/
+
+set rtp+=~/.fzf
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>f :Files<CR>
