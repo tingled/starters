@@ -13,3 +13,7 @@ cp .tmux.conf ~/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp .vimrc ~/
 
+sudo cp bin/* /usr/local/bin/
+
+cp ~/.gitignore_global ~/
+git config --global core.excludesfile ~/.gitignore_global

@@ -11,6 +11,7 @@ Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'junegunn/fzf.vim'
+Plugin 'vim-scripts/AutoComplPop'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -44,3 +45,11 @@ match ExtraWhitespace /\s\+$/
 set rtp+=~/.fzf
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :Files<CR>
+
+" ctags
+augroup CTags
+    autocmd!
+    autocmd BufWritePost * silent !ctags-gen 2> /dev/null
+augroup END
+set tags=.tags;/
+inoremap <expr> <TAB> pumvisible() ? '<CR>' : "\<TAB>"
