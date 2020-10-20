@@ -15,5 +15,5 @@ cp .vimrc ~/
 
 sudo cp bin/* /usr/local/bin/
 
-cp ~/.gitignore_global ~/
+cp .gitignore_global ~/
 git config --global core.excludesfile ~/.gitignore_global
